@@ -60,15 +60,18 @@
 
             <div class="infoBox__top">
                 <div class="infoBox__top__text">
-                    <p>What we arr<br/>offering</p>
+                    <p>What we are<br/>offering</p>
                     <p>property facilities</p>
                     <p>We have 5000+ Reviews and our<br/>customers trust on our Quality products<br/>and trust own our products.</p>
                 </div>
                 <div class="infoBox__top__iconBox1">
+                    
+                </div>
+                <div class="infoBox__top__iconBox2">
                     <img src="assets/images/icons/gym-icon-wbg.png" alt="Gym Icon">
                     <p>Gym</p>
                 </div>
-                <div class="infoBox__top__iconBox2">
+                <div class="infoBox__top__iconBox3">
                     <img src="assets/images/icons/parking-icon-wbg.png" alt="Parking Icon">
                     <p>Parking</p>
                 </div>
@@ -93,6 +96,24 @@
             </div>
         </div>
 
+        <div class="snapScroll sec3">
+            Section 3
+        </div>
     </div>
+
+    <script>
+        const scroll_infoBox_bottom = document.querySelector(".infoBox__bottom");
+        const scroll_infoBox_top = document.querySelector(".infoBox__top");
+
+        scroll_infoBox_bottom.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scroll_infoBox_bottom.scrollLeft += evt.deltaY;
+        });
+
+        scroll_infoBox_top.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scroll_infoBox_top.scrollLeft += evt.deltaY;
+        });
+    </script>
 </body>
 </html>

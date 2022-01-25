@@ -1,0 +1,124 @@
+.infoBox {
+    padding: 2.5rem 5rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.infoBox .infoBox__top, .infoBox .infoBox__bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    overflow: scroll hidden;
+}
+
+.infoBox .infoBox__bottom {
+    margin-top: 5rem;
+}
+
+.infoBox .infoBox__top div,
+.infoBox .infoBox__bottom div {
+    text-align: center;
+    height: 25rem;
+    min-width: 25rem;
+    max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: scale(1);
+    transition: 0.3s;
+}
+
+.infoBox .infoBox__top::-webkit-scrollbar, .infoBox .infoBox__bottom::-webkit-scrollbar {
+    display: none;
+}
+
+.infoBox .infoBox__top div p,
+.infoBox .infoBox__bottom div p {
+    font-size: 1.6rem;
+    color: var(--Eerie-Black);
+    font-weight: 800;
+}
+
+.infoBox .infoBox__top div:not(.infoBox .infoBox__top div:nth-child(1), .infoBox .infoBox__top div:nth-child(2)):hover,
+.infoBox .infoBox__bottom div:not(.infoBox .infoBox__bottom div:nth-child(1)):hover {
+    transform: scale(1.1);
+    background-color: gray;
+    transition: 0.3s;
+}
+
+.infoBox .infoBox__top div:nth-child(1) {
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.infoBox .infoBox__top div:nth-child(1) p:nth-child(1) {
+    font-size: 3.2rem;
+}
+
+.infoBox .infoBox__top div:nth-child(1) p:nth-child(2) {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.infoBox .infoBox__top div:nth-child(1) p:nth-child(3) {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.infoBox .infoBox__top div:nth-child(3) {
+    background-color: var(--Platinum);
+}
+
+.infoBox .infoBox__bottom div:nth-child(even) {
+    background-color: var(--Platinum);
+}
+
+.infoBox__bottom__iconBox1 {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding-left: 2rem;
+}
+
+.infoBox__bottom__iconBox1 svg {
+    font-size: 8rem;
+    margin-left: 0rem;
+    transition: 0.3s;
+}
+
+.infoBox__bottom__iconBox1 svg:hover {
+    margin-left: 5rem;
+    font-size: 8rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sec3 {
+    height: 100vh;
+    background-color: var(--Platinum);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+@media only screen and (max-width: 500px) {
+    .infoBox {
+        padding: 2.5rem 1rem;
+    }
+}

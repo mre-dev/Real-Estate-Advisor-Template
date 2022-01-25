@@ -4,3 +4,7 @@ html {
     height: auto;
     scroll-behavior: smooth;
 }
+
+html::-webkit-scrollbar {
+    display: none;
+}
