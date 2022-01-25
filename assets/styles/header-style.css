@@ -1,0 +1,214 @@
+@import url(chimney-smoke-animation.css);
+
+.snapScroll {
+    scroll-snap-align: start;
+}
+
+header {
+    height: calc(100vh - 10rem);
+    margin-bottom: 15rem;
+    background: rgb(109,132,172);
+    background: -moz-linear-gradient(90deg, rgba(109,132,172,1) 0%, rgba(153,168,197,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(109,132,172,1) 0%, rgba(153,168,197,1) 100%);
+    background: linear-gradient(90deg, rgba(109,132,172,1) 0%, rgba(153,168,197,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6d84ac",endColorstr="#99a8c5",GradientType=1);
+}
+
+header .headerNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.5rem;
+    margin: 0rem 5rem;
+    height: 10vh;
+}
+
+header .headerNav .headerNav__title h1 {
+    font-size: 3.2rem;
+    color: var(--Mint-Cream);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .headerNav .headerNav__title h1:hover {
+    color: var(--Eerie-Black);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .headerNav .headerNav__icon svg {
+    font-size: 2.8rem;
+    color: var(--Mint-Cream);
+    transition: 0.3s;
+}
+
+header .headerNav .headerNav__icon svg:hover {
+    color: var(--Eerie-Black);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+header .headerNav .headerNav__icon svg:nth-child(1) {
+    margin-right: 2rem;
+}
+
+header .headerContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
+    gap: 1.5rem;
+}
+
+header .headerContent .headerContent__right {
+    padding-left: 5rem;
+    z-index: 1;
+}
+
+header .headerContent .headerContent__right .headerContent__right__mainText {
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--Mint-Cream);
+    line-height: 6rem;
+    width: max-content;
+    width: 35rem;
+}
+
+header .headerContent .headerContent__right .headerContent__right__desc {
+    font-size: 1.6rem;
+    color: var(--Mint-Cream);
+    margin: 4rem 0rem;
+    width: 36rem;
+}
+
+header .headerContent .headerContent__right .headerContent__right__button a {
+    padding: 1.25rem 4rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    width: 15rem;
+    display: inline-block;
+    transform: scale(1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+header .headerContent .headerContent__right .headerContent__right__button a:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+header .headerContent .headerContent__right .headerContent__right__button a:nth-child(1) {
+    background-color: var(--Eerie-Black);
+    color: var(--Mint-Cream);
+    border: 0.2rem solid var(--Eerie-Black);
+    margin-right: 1rem;
+}
+
+header .headerContent .headerContent__right .headerContent__right__button a:nth-child(2) {
+    background-color: transparent;
+    color: var(--Mint-Cream);
+    border: 0.2rem solid var(--Mint-Cream);
+}
+
+
+header .headerContent .headerContent__left {
+    text-align: right;
+    height: inherit;
+}
+
+header .headerContent .headerContent__left img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80rem;
+    min-width: 80rem;
+    min-height: 60rem;
+    height: 60rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    header {
+        height: 100vh;
+    }
+
+    header .headerContent .headerContent__left img {
+        width: 70rem;
+        min-width: 70rem;
+        min-height: 50rem;
+        height: 50rem;
+        top: 24.9rem;
+    }
+
+    #chimney-main {
+        top: 28rem;
+        position: absolute;
+        right: 29rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    header .headerContent .headerContent__left img {
+        filter: blur(0.5rem);
+    }
+
+    header .headerContent .headerContent__right .headerContent__right__button a:nth-child(2) {
+        background-color: var(--Eerie-Black);
+        color: var(--Mint-Cream);
+        border: 0.2rem solid var(--Eerie-Black);
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    header .headerContent .headerContent__right {
+        width: 100%;
+        text-align: center;
+        padding: 0rem 5rem;
+    }
+
+    header .headerContent .headerContent__right .headerContent__right__mainText {
+        width: 100%;
+    }
+    
+    header .headerContent .headerContent__right .headerContent__right__desc {
+        width: 100%;
+    }
+
+    header .headerContent .headerContent__left {
+        text-align: right;
+        height: inherit;
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    header .headerContent .headerContent__right .headerContent__right__mainText {
+        width: 100%;
+        font-size: 2.3rem;
+        line-height: 3rem;
+    }
+
+    header .headerContent .headerContent__right .headerContent__right__button {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    header .headerContent .headerContent__right .headerContent__right__button a:nth-child(1) {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    header .headerContent .headerContent__right {
+        padding: 0rem 1rem;
+    }
+}
